@@ -9,7 +9,7 @@ const DELAY = 250;
 const LINES_DALEY = 800;
 
 const StyledTitleContainer = styled.h1`
-	color: #ddd;
+	color: #e5c3c3;
 	text-align: center;
 	position: fixed;
 	top: ${(props) => props.offset}px;
@@ -18,20 +18,31 @@ const StyledTitleContainer = styled.h1`
 	cursor: default;
 	display: flex;
 	justify-content: center;
+
+	background: linear-gradient(93.24deg, #fbe7f0 4.1%, #cea8ff 154%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+
+	text-shadow: 6px 8px 9px rgba(246, 242, 255, 0.15);
+
+
+
 `;
 
 const StyledHeaderContainer = styled.section`
-	height: 66vh;
+	height: 100vh;
 	background-color: #141414;
 	display: grid;
 	grid-template-columns: repeat(40, auto);
 	overflow: hidden;
+
 `;
 
 function Header() {
-	const titleStr = 'My Name is Irad Doron';
+	const titleStr = 'Irad Doron';
 	const titleArr = titleStr.split(' ');
-	const subTitleStr = 'And I am a Fullstack Developer';
+	const subTitleStr = 'Fullstack Developer';
 	const subTitleArr = subTitleStr.split(' ');
 
 	const [currRedValue, setCurrRedValue] = useState(0);

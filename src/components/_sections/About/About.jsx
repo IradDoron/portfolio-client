@@ -75,7 +75,7 @@ function About() {
 	return (
 		<>
 			<SectionContainer color={color}>
-				<SectionHeader color={color}>About</SectionHeader>
+				<SectionHeader color={color}>About Me</SectionHeader>
 
 				{aboutData.map((section, index) => {
 					return (

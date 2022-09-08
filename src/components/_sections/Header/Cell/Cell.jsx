@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 import { useState } from 'react';
 
-const cellSize = 30;
+const cellSize = 60;
 
 const StyledCell = styled.div`
 	height: ${cellSize}px;
 	width: ${cellSize}px;
 	background-color: ${(props) => props.color};
+
 	/* border: solid salmon; */
 `;
 
