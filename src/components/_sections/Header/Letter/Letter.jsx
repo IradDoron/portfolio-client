@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { animated, useSpring, useTransition } from 'react-spring';
 import { useState } from 'react';
+import { animated, useSpring, useTransition } from 'react-spring';
+import styled from 'styled-components';
 
 const StyledLetter = styled.h1`
 	font-size: 4rem;
@@ -9,21 +9,18 @@ const StyledLetter = styled.h1`
 
 function Letter({ children, letterTimeOut }) {
 	const [isCancel, setIsCancel] = useState(true);
-	const [currSpring, setCurrSpring] = useState(
+	// useState with the array syntax
+	const currSpring = useState(
 		useSpring({
 			from: { y: -400 },
 			to: { y: 0 },
 			cancel: isCancel,
 		})
-	);
+	)[0];
 
 	const [isLeaving, setIsLeaving] = useState(true);
-	const [isSlideOff, setIsSlideOff] = useState(false);
-
-	const leaveStyle = useSpring({
-		from: { y: 0 },
-		to: { y: -500 },
-	});
+	// useState with the array syntax
+	const isSlideOff = useState(false)[0];
 
 	const transition = useTransition(isSlideOff, {
 		from: { y: 0 },
