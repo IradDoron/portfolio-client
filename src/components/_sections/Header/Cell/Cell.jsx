@@ -27,13 +27,13 @@ function Cell({ setCurrRedValue, currRedValue }) {
 		return `rgb(${r}, ${g}, ${b})`;
 	}
 
-	function getCellColorByState(currRedValue) {
-		const r = currRedValue;
-		const g = 40;
-		const b = 140;
+	// function getCellColorByState(currRedValue) {
+	// 	const r = currRedValue;
+	// 	const g = 40;
+	// 	const b = 140;
 
-		return `rgb(${r}, ${g}, ${b})`;
-	}
+	// 	return `rgb(${r}, ${g}, ${b})`;
+	// }
 
 	function handleMouseEnter() {
 		if (currRedValue <= 255) {
@@ -42,6 +42,10 @@ function Cell({ setCurrRedValue, currRedValue }) {
 			setCurrRedValue((currRedValue = 0));
 		}
 
+		// option 1
+		// setColor(getCellColorByState(currRedValue));
+
+		// option 2
 		setColor(getCellColorByTime());
 	}
 
