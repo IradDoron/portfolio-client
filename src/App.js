@@ -9,6 +9,7 @@ import styled from 'styled-components';
 
 const ScBodyWrapper = styled.div`
 	background-color: #fff;
+	border: solid #fff;
 	position: relative;
 `;
 
