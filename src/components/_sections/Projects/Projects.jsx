@@ -9,16 +9,10 @@ import SectionSubHeader from '../../_general/SectionSubHeader';
 
 const projectsData = [
 	{
-		projectTitle: 'Project 1',
-		githubLink: 'https://www.google.com/',
-		liveLink: 'https://www.google.com/',
-		description: 'lorem ipsum dolar peni shekel zloti yen',
-	},
-	{
-		projectTitle: 'Project 2',
-		githubLink: 'https://www.google.com/',
-		liveLink: 'https://www.google.com/',
-		description: 'lorem ipsum dolar peni shekel zloti yen',
+		projectTitle: 'Battleship real-time',
+		githubLink: 'https://github.com/IradDoron/battleship-client',
+		liveLink: 'https://battleship-irad.netlify.app/',
+		description: 'I wrote a game similar to the classic battleship game, but with a real-time multiplayer. The game is written in React and uses Node.js and Socket.io for the server.',
 	},
 ];
 

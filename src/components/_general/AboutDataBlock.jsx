@@ -6,7 +6,7 @@ function AboutDataBlock({ field, content, type, color }) {
 	return (
 		<AboutDataContainer color={color}>
 			<AboutDataKey>{field}:</AboutDataKey>
-			<AboutDataValue type={type} content={content}>{content}.</AboutDataValue>
+			<AboutDataValue type={type} content={content}>{content}</AboutDataValue>
 		</AboutDataContainer>
 	);
 }
