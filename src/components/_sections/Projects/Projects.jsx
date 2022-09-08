@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import ThemeContext from '../../../theme/ThemeContext';
-import AboutDataBlock from '../../_general/AboutDataBlock';
 import ProjectCard from '../../_general/ProjectCard';
 import ProjectDescription from '../../_general/ProjectDescription';
 import ProjectLink from '../../_general/ProjectLink';
