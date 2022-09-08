@@ -9,7 +9,7 @@ import SectionSubHeader from '../../_general/SectionSubHeader';
 
 const projectsData = [
 	{
-		projectTitle: 'Battleship real-time',
+		projectTitle: 'Battleship Real-time',
 		githubLink: 'https://github.com/IradDoron/battleship-client',
 		liveLink: 'https://battleship-irad.netlify.app/',
 		description: 'I wrote a game similar to the classic battleship game, but with a real-time multiplayer. The game is written in React and uses Node.js and Socket.io for the server.',
