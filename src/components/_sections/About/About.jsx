@@ -11,6 +11,11 @@ const aboutData = [
 		sectionTitle: 'General Info',
 		sectionData: [
 			{ type: 'text', field: 'Name', content: 'Irad Doron' },
+			{
+				type: 'text',
+				field: 'Position',
+				content: `I'm a junior developer and looking for my first position as full stack developer`,
+			},
 
 			{ type: 'text', field: 'City', content: 'Rosh Haayin' },
 
@@ -32,6 +37,28 @@ const aboutData = [
 		],
 	},
 	{
+		sectionTitle: 'More about me',
+		sectionData: [
+			{
+				type: 'list',
+				field: 'Characteristics',
+				content: [
+					`I like to learn new concepts and new tools to improve my skills in any area of my life and especially in web development`,
+					`I'm say what I think, ask what I don't understand and always listen carefully to what others have to say`,
+				],
+			},
+			{
+				type: 'list',
+				field: 'Hobbies',
+				content: [
+					`Create music with digital audio workstation, and also play the piano and write music for piano`,
+					`Read books about self-development and personal growth`,
+					`I like to watch anime series about adventure`,
+				],
+			},
+		],
+	},
+	{
 		sectionTitle: 'Education',
 		sectionData: [
 			{
@@ -39,6 +66,11 @@ const aboutData = [
 				field: '1/12/2021 - 24/7/2022',
 				content: 'Full stack course in Netcrat Academy',
 			},
+			{
+				type: 'text',
+				field: '1/9/2013 - 14/7/2014',
+				content: 'Full Matriculation Certificates in Begin High School',
+			}
 		],
 	},
 	{
@@ -57,7 +89,13 @@ const aboutData = [
 			{
 				type: 'text',
 				field: 'Coding skills',
-				content: 'JavaScript, React, Node.JS',
+				content: 'JavaScript, React, Node.JS, HTML, CSS, Git, MongoDB',
+			},
+			{
+				type: 'text',
+				field: 'Favorite libraries',
+				content:
+					'Styled Components, React Router, Socket.IO, Express, Material UI',
 			},
 			{
 				type: 'text',
@@ -85,15 +123,15 @@ function About() {
 							</SectionSubHeader>
 							{section.sectionData.map((rowData, index) => {
 								const field = rowData.field;
-                                const type = rowData.type;
-                                const content = rowData.content;
+								const type = rowData.type;
+								const content = rowData.content;
 
 								return (
 									<AboutDataBlock
 										key={field}
 										field={field}
 										content={content}
-                                        type={type}
+										type={type}
 										color={color}
 									/>
 								);
