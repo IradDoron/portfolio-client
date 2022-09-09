@@ -5,12 +5,12 @@ import { useContext } from 'react';
 import ThemeContext from '../../theme/ThemeContext';
 
 const ScSectionSubHeader = styled.h2`
-	font-family: ${(props) => props.fontFamily.secondary};
+	font-family: ${(props) => props.fontFamily};
 	color: ${(props) => props.color};
 	font-weight: bold;
 	font-size: ${(props) => props.fontSize};
 	text-align: center;
-    margin: 8px;
+	margin: 8px;
 `;
 
 function SectionSubHeader({ color, children }) {

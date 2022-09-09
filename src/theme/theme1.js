@@ -1,6 +1,6 @@
 const theme = {
 	fontFamily: {
-		primary: 'Kefa, sans-serif',
+		primary: 'Heebo, sans-serif',
 		secondary: 'Poppins, sans-serif',
 	},
 	typography: {

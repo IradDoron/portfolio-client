@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import ThemeContext from '../../theme/ThemeContext';
 
 const ScSectionHeader = styled.h1`
-	font-family: ${(props) => props.fontFamily.primary};
+	font-family: ${(props) => props.fontFamily};
 	color: ${(props) => props.color};
 	font-size: ${(props) => props.fontSize};
 	text-align: center;
@@ -13,6 +13,7 @@ const ScSectionHeader = styled.h1`
 
 function SectionHeader({ color, children }) {
 	const { theme } = useContext(ThemeContext);
+	console.log(theme.fontFamily.primary);
 
 	return (
 		<>
