@@ -31,14 +31,12 @@ const ScScrollDown = styled.div`
 	top: -100px;
 	left: 50%;
 	transform: translateX(-50%);
-	font-family: ${(props) => props.fontFamily};
-	font-size: ${(props) => props.fontSize};
+	font-family: ${(props) => props.theme.fontFamily.primary};
+	font-size: ${(props) => props.theme.typography.size.h2};
 	animation-name: ${ScBlinkingAnimation};
 	animation-duration: 1.5s;
-	animation-iteration-count: infinite;	
+	animation-iteration-count: infinite;
 `;
-
-
 
 function App() {
 	return (
@@ -46,8 +44,7 @@ function App() {
 			<Header />
 			<ScBodyWrapper>
 				<ScScrollDown
-					fontFamily={theme.fontFamily.primary}
-					fontSize={theme.typography.size.h2}
+					theme={theme}
 				>
 					Scroll Down
 				</ScScrollDown>

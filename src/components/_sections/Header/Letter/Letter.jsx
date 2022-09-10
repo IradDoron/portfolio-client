@@ -51,6 +51,7 @@ function Letter({ children, letterTimeOut }) {
 	function handleClick() {
 		setIsLeaving(true);
 	}
+	
 	return (
 		<>
 			{transition((style, item) =>
