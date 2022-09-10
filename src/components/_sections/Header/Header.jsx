@@ -69,7 +69,7 @@ function Header() {
 					);
 				})}
 			</StyledTitleContainer>
-			<StyledTitleContainer offset={160}>
+			<StyledTitleContainer offset={120}>
 				{subTitleArr.map((value, index) => {
 					return (
 						<Letter

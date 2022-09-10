@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { animated, useSpring, useTransition } from 'react-spring';
 import styled from 'styled-components';
+import ThemeContext from '../../../../theme/ThemeContext';
 
 const StyledLetter = styled.h1`
-	font-size: 4rem;
+	font-size: ${(props) => props.theme.typography.size.h1};
 	margin-right: 20px;
+	@media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+		font-size: ${(props) => props.theme.typography.size.h2};
+	}
+	@media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+		font-size: ${(props) => props.theme.typography.size.h3};
+	}
+	@media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+		font-size: ${(props) => props.theme.typography.size.h4};
+	}
 `;
 
 function Letter({ children, letterTimeOut }) {
 	const [isCancel, setIsCancel] = useState(true);
+	const { theme } = useContext(ThemeContext);
 	// useState with the array syntax
 	const currSpring = useState(
 		useSpring({
@@ -48,6 +59,7 @@ function Letter({ children, letterTimeOut }) {
 						as={animated.div}
 						style={currSpring}
 						onClick={handleClick}
+						theme={theme}
 					>
 						<animated.div style={leaveSpring}>{children}</animated.div>
 					</StyledLetter>
