@@ -36,27 +36,7 @@ const aboutData = [
 			},
 		],
 	},
-	{
-		sectionTitle: 'More about me',
-		sectionData: [
-			{
-				type: 'list',
-				field: 'Characteristics',
-				content: [
-					`I like to learn new concepts and new tools to improve my skills in any area of my life and especially in web development`,
-				],
-			},
-			{
-				type: 'list',
-				field: 'Hobbies',
-				content: [
-					`Create music with digital audio workstation, and also play the piano and write music for piano`,
-					`Read books about self-development and personal growth`,
-					`I like to watch anime series about adventure`,
-				],
-			},
-		],
-	},
+
 	{
 		sectionTitle: 'Education',
 		sectionData: [
@@ -100,6 +80,27 @@ const aboutData = [
 				type: 'text',
 				field: 'Languages',
 				content: 'Hebrew (native language), English',
+			},
+		],
+	},
+	{
+		sectionTitle: 'More about me',
+		sectionData: [
+			{
+				type: 'list',
+				field: 'Characteristics',
+				content: [
+					`I like to learn new concepts and new tools to improve my skills in any area of my life and especially in web development`,
+				],
+			},
+			{
+				type: 'list',
+				field: 'Hobbies',
+				content: [
+					`Create music with digital audio workstation, and also play the piano and write music for piano`,
+					`Read books about self-development and personal growth`,
+					`I like to watch anime series about adventure`,
+				],
 			},
 		],
 	},
