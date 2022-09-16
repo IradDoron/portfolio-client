@@ -44,7 +44,6 @@ const aboutData = [
 				field: 'Characteristics',
 				content: [
 					`I like to learn new concepts and new tools to improve my skills in any area of my life and especially in web development`,
-					`I'm say what I think, ask what I don't understand and always listen carefully to what others have to say`,
 				],
 			},
 			{
