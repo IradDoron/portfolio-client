@@ -4,20 +4,28 @@ import ThemeContext from '../../theme/ThemeContext';
 
 const ScProjectDescription = styled.p`
 	margin: 24px 0;
-    font-family: ${(props) => props.fontFamily};
+	font-family: ${(props) => props.fontFamily};
 	font-weight: normal;
 `;
 
 function ProjectDescription({ children }) {
 	const { theme } = useContext(ThemeContext);
 
+	// children is the array of sentences
 	return (
-		<ScProjectDescription
-			fontSize={theme.typography.size.body}
-			fontFamily={theme.fontFamily.secondary}
-		>
-			{children}
-		</ScProjectDescription>
+		<>
+			{children.map((p, index) => {
+				return (
+					<ScProjectDescription
+						key={index}
+						fontSize={theme.typography.size.body}
+						fontFamily={theme.fontFamily.secondary}
+					>
+						{p}
+					</ScProjectDescription>
+				);
+			})}
+		</>
 	);
 }
 
