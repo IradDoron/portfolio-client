@@ -43,13 +43,9 @@ function App() {
 		<ThemeContext.Provider value={{ theme }}>
 			<Header />
 			<ScBodyWrapper>
-				<ScScrollDown
-					theme={theme}
-				>
-					Scroll Down
-				</ScScrollDown>
-				<About />
+				<ScScrollDown theme={theme}>Scroll Down</ScScrollDown>
 				<Projects />
+				<About />
 			</ScBodyWrapper>
 		</ThemeContext.Provider>
 	);
