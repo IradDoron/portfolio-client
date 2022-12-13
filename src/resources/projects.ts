@@ -4,7 +4,7 @@ export const projects: Project[] = [
 	{
 		projectTitle: 'Find Da Note',
 		githubLink: 'https://github.com/IradDoron/find-da-note',
-		liveLink: 'https://main--effortless-licorice-e5157b.netlify.app/',
+		liveLink: 'https://find-da-note.netlify.app/',
 		description: [
 			'A game where you have to find the right note according to given note, interval and direction',
 			'The game is written in React and uses the context and reducer hooks API for manage the logic and data',
@@ -16,8 +16,8 @@ export const projects: Project[] = [
 		description: [
 			'Musical Road is a learning platform for music',
 			'At the moment you can find here notations for piano pieces and songs',
-			'I wrote this project with React and TypeSctipt',
-			'For the state manegement I used Recoil, and for the styling Material UI and Styled Components',
+			'I wrote this project with React and TypeScript',
+			'For the state management I used Recoil, and for the styling Material UI and Styled Components',
 		],
 	},
 	{
@@ -39,7 +39,7 @@ export const projects: Project[] = [
 		description: [
 			`My developer friend Peleg and I created this project to help musical players manage technique practice`,
 			'The user can fill a form and add an exercise to a table',
-			'All the exerisces can be edited, and they are stored in the local storage',
+			'All the exercises can be edited, and they are stored in the local storage',
 			'We also included a timer to set some time for the practice session, and a metronome',
 			'We used React, Styled Components, React Table and Tone.js',
 		],
