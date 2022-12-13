@@ -2,8 +2,8 @@ import { Stack } from '@mui/material';
 
 import { projects } from 'resources';
 
-import { SectionTitle } from 'components/Shared/SectionTitle';
 import { ProjectCard } from 'sections/Projects/ProjectCard';
+import { SectionTitle } from 'Shared/SectionTitle';
 
 export const Projects = () => {
 	return (

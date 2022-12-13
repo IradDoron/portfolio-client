@@ -1,13 +1,14 @@
 import {
 	Button,
 	ButtonGroup,
-	Card as MuiCard,
 	CardActions,
 	CardContent,
 	Link,
 	Stack,
 	Typography,
 } from '@mui/material';
+
+import { MyCard } from 'Shared';
 
 import { styled } from '@mui/material/styles';
 
@@ -22,10 +23,16 @@ const StyledLink = styled(Link)({
 	textDecoration: 'none',
 });
 
+const StyledDescriptionTypography = styled(Typography)(({ theme }) => ({
+	[theme.breakpoints.down('sm')]: {
+		fontSize: '0.8rem',
+	},
+}));
+
 export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const { projectTitle, githubLink, liveLink, description } = project;
 	return (
-		<MuiCard
+		<MyCard
 			sx={{
 				width: 400,
 				minHeight: '300px',
@@ -54,7 +61,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 				>
 					{description.map((sentence) => {
 						return (
-							<Typography
+							<StyledDescriptionTypography
 								key={sentence}
 								variant="body2"
 								color="text.secondary"
@@ -64,7 +71,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 								}}
 							>
 								{sentence}.
-							</Typography>
+							</StyledDescriptionTypography>
 						);
 					})}
 				</Stack>
@@ -118,6 +125,6 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 					</Button>
 				</ButtonGroup>
 			</CardActions>
-		</MuiCard>
+		</MyCard>
 	);
 };

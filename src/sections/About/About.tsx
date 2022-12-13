@@ -1,8 +1,6 @@
-import { Card, Chip, Stack, Typography } from '@mui/material';
-
-import { styled } from '@mui/material/styles';
-
+import { Chip, Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
 
 import { about } from 'resources';
 
@@ -10,35 +8,55 @@ import { GeneralInfo as GeneralInfoType } from 'types/AboutTypes';
 
 import { getRegularCaseFromCamelCase } from 'helpers';
 
-import { SectionTitle } from 'components/Shared/SectionTitle';
+import { MyCard, SectionTitle } from 'Shared';
 
-const StyledAboutCard = styled(Card)({
+const StyledAboutCard = styled(MyCard)(({ theme }) => ({
 	width: '700px',
 	padding: '20px',
-});
+}));
 
-const StyledAboutTitle = styled(Typography)({
+const StyledBodyTypography = styled(Typography)(({ theme }) => ({
+	fontSize: '0.8rem',
+}));
+
+const StyledAboutTitle = styled(Typography)(({ theme }) => ({
 	fontSize: '2rem',
 	fontWeight: 'bold',
 	marginBottom: '20px',
 	textAlign: 'center',
-});
 
-const StyledAboutInfoRow = styled(Stack)({
+	[theme.breakpoints.down('sm')]: {
+		fontSize: '1.5rem',
+	},
+}));
+
+const StyledAboutInfoRow = styled(Stack)(({ theme }) => ({
 	flexDirection: 'row',
 	justifyContent: 'flex-start',
 	alignItems: 'center',
 	margin: '0px',
 	gap: '30px',
-});
 
-const StledChip = styled(Chip)({
+	[theme.breakpoints.down('sm')]: {
+		flexDirection: 'column',
+		alignItems: 'center',
+		justifyContent: 'center',
+		gap: '10px',
+		textAlign: 'center',
+	},
+}));
+
+const StledChip = styled(Chip)(({ theme }) => ({
 	fontSize: '1.1rem',
 	color: grey[700],
 	backgroundColor: grey[200],
 	minWidth: '140px',
 	margin: '0px',
-});
+
+	[theme.breakpoints.down('sm')]: {
+		fontSize: '0.7rem',
+	},
+}));
 
 type GeneralInfoProps = {
 	data: GeneralInfoType;
@@ -64,7 +82,7 @@ export const GeneralInfo = ({ data }: GeneralInfoProps) => {
 								label={getRegularCaseFromCamelCase(key)}
 								variant="outlined"
 							/>
-							<Typography>{value}</Typography>
+							<StyledBodyTypography>{value}</StyledBodyTypography>
 						</StyledAboutInfoRow>
 					);
 				})}
@@ -86,7 +104,7 @@ export const Education = ({ data }: { data: any }) => {
 								label={getRegularCaseFromCamelCase(title)}
 								variant="outlined"
 							/>
-							<Typography>{date}</Typography>
+							<StyledBodyTypography>{date}</StyledBodyTypography>
 						</StyledAboutInfoRow>
 					);
 				})}
@@ -143,7 +161,7 @@ export const MilitaryService = ({ data }: { data: any }) => {
 			<Stack spacing={4}>
 				<StyledAboutInfoRow>
 					<StledChip label={title} variant="outlined" />
-					<Typography>{date}</Typography>
+					<StyledBodyTypography>{date}</StyledBodyTypography>
 				</StyledAboutInfoRow>
 			</Stack>
 		</StyledAboutCard>
