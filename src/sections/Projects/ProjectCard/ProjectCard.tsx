@@ -29,6 +29,9 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 			sx={{
 				width: 400,
 				minHeight: '300px',
+				display: 'flex',
+				flexDirection: 'column',
+				justifyContent: 'space-between',
 			}}
 		>
 			<CardContent>
@@ -60,7 +63,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 									marginBottom: '10px',
 								}}
 							>
-								{sentence}
+								{sentence}.
 							</Typography>
 						);
 					})}
@@ -81,20 +84,23 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 						justifySelf: 'flex-end',
 					}}
 				>
-					<Button
-						variant="outlined"
-						sx={{
-							marginRight: '10px',
-						}}
-					>
-						<StyledLink
-							href={githubLink}
-							target="_blank"
-							rel="noopener noreferrer"
+					{githubLink && (
+						<Button
+							variant="outlined"
+							sx={{
+								marginRight: '10px',
+							}}
 						>
-							Github
-						</StyledLink>
-					</Button>
+							<StyledLink
+								href={githubLink}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Github
+							</StyledLink>
+						</Button>
+					)}
+
 					<Button
 						variant="outlined"
 						color="secondary"
