@@ -12,4 +12,3 @@ See the live site at [https://www.iraddoron.com](https://www.iraddoron.com).
 
 - [ ] Add to projects card a modal with more info
 - [ ] Add a "contact me"
-- [ ] Make the site responsive
