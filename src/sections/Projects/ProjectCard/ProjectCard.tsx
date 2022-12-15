@@ -8,7 +8,7 @@ import {
 	Typography,
 } from '@mui/material';
 
-import { MyCard } from 'Shared';
+import { MyCard, Paragraph } from 'Shared';
 
 import { styled } from '@mui/material/styles';
 
@@ -22,12 +22,6 @@ const StyledLink = styled(Link)({
 	color: 'inherit',
 	textDecoration: 'none',
 });
-
-const StyledDescriptionTypography = styled(Typography)(({ theme }) => ({
-	[theme.breakpoints.down('sm')]: {
-		fontSize: '0.8rem',
-	},
-}));
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const { projectTitle, githubLink, liveLink, description } = project;
@@ -61,17 +55,15 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 				>
 					{description.map((sentence) => {
 						return (
-							<StyledDescriptionTypography
+							<Paragraph
 								key={sentence}
-								variant="body2"
 								color="text.secondary"
 								sx={{
-									fontSize: '1.1rem',
 									marginBottom: '10px',
 								}}
 							>
 								{sentence}.
-							</StyledDescriptionTypography>
+							</Paragraph>
 						);
 					})}
 				</Stack>

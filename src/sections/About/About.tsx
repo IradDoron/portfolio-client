@@ -8,15 +8,11 @@ import { GeneralInfo as GeneralInfoType } from 'types/AboutTypes';
 
 import { getRegularCaseFromCamelCase } from 'helpers';
 
-import { MyCard, SectionTitle } from 'Shared';
+import { MyCard, Paragraph, SectionTitle } from 'Shared';
 
 const StyledAboutCard = styled(MyCard)(({ theme }) => ({
 	width: '700px',
 	padding: '20px',
-}));
-
-const StyledBodyTypography = styled(Typography)(({ theme }) => ({
-	fontSize: '0.8rem',
 }));
 
 const StyledAboutTitle = styled(Typography)(({ theme }) => ({
@@ -82,7 +78,7 @@ export const GeneralInfo = ({ data }: GeneralInfoProps) => {
 								label={getRegularCaseFromCamelCase(key)}
 								variant="outlined"
 							/>
-							<StyledBodyTypography>{value}</StyledBodyTypography>
+							<Paragraph>{value}</Paragraph>
 						</StyledAboutInfoRow>
 					);
 				})}
@@ -104,7 +100,7 @@ export const Education = ({ data }: { data: any }) => {
 								label={getRegularCaseFromCamelCase(title)}
 								variant="outlined"
 							/>
-							<StyledBodyTypography>{date}</StyledBodyTypography>
+							<Paragraph>{date}</Paragraph>
 						</StyledAboutInfoRow>
 					);
 				})}
@@ -161,7 +157,7 @@ export const MilitaryService = ({ data }: { data: any }) => {
 			<Stack spacing={4}>
 				<StyledAboutInfoRow>
 					<StledChip label={title} variant="outlined" />
-					<StyledBodyTypography>{date}</StyledBodyTypography>
+					<Paragraph>{date}</Paragraph>
 				</StyledAboutInfoRow>
 			</Stack>
 		</StyledAboutCard>
