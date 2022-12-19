@@ -7,7 +7,7 @@ export const projects: Project[] = [
 		liveLink: 'https://find-da-note.netlify.app/',
 		description: [
 			'A game where you have to find the right note according to given note, interval and direction',
-			'The game is written in React and uses the context and reducer hooks API for manage the logic and data',
+			'The game is written in React and TypeScript, uses Recoil for state management and Styled Components for styling',
 		],
 	},
 	{
